@@ -15,25 +15,10 @@
 }
 </script>
 
-<div id="cnt1"></div>
+<div id="cnt0"></div>
 
 <script type=module>
 import { Console as CLI } from "endap";
-import { RandNum as RNU } from "endap";
-
-// Bikin konsol dan pasang ke <div id="cnt1">
-const consoles = CLI.create("100px"); // Diperbesar ke 100px agar muat output teks
-const cnt = document.getElementById("cnt1");
-cnt.append(consoles.el);
-
-// Jalankan logika angka acak
-const min = 10;
-const max = 90;
-const n = 10;
-const x = RNU.randIntN(min, max, n);
-
-consoles.log("x = ", "");
-consoles.log("x = ");import { Console as CLI } from "endap";
 import { RandNum as RNU } from "endap";
 
 const consoles = CLI.create("40px");
