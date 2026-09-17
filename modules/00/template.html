@@ -6,7 +6,6 @@
 <body>
 <!-- code begins -->
 
-
 <script src="/libs/chartjs/4.5.1/chart.umd.min.js" defer></script>
 <script type="importmap">
 {
@@ -16,33 +15,26 @@
 }
 </script>
 
-
-<div id="cnt1">
-</div>
-
+<div id="cnt1"></div>
 
 <script type=module>
 import { Console as CLI } from "endap";
 import { RandNum as RNU } from "endap";
 
-// Buat konsol
-const consoles = CLI.create("60px"); // Bikin sedikit lebih tinggi agar muat 2 baris
-
+// Bikin konsol dan pasang ke <div id="cnt1">
+const consoles = CLI.create("40px"); // Diperbesar ke 100px agar muat output teks
 const cnt = document.getElementById("cnt1");
 cnt.append(consoles.el);
 
+// Jalankan logika angka acak
 const min = 10;
 const max = 90;
 const n = 10;
-
-// Generate array
 const x = RNU.randIntN(min, max, n);
 
-// Cetak label dan array
-consoles.log("x = ");
-consoles.log(JSON.stringify(x)); // Konversi array ke string agar tampil utuh
+consoles.log("x = ", "");
+consoles.log(x);
 </script>
-
 
 <!-- code ends -->
 </body>
